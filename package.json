@@ -14,6 +14,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "node-osascript": "^1.0.4"
+    "node-osascript": "^1.0.4",
+    "enumify": "^1.0.4"
   }
 }
