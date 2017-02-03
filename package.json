@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "node-osascript": "^1.0.4",
-    "enumify": "^1.0.4"
+    "enumify": "^1.0.4",
+    "immutable": "^3.8.1"
   },
   "consumedServices": {
     "status-bar": {
