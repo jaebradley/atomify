@@ -1,6 +1,6 @@
 {
   "atom-workspace": {
     "ctrl-alt-o": "atomify:toggle",
-    "ctrl-alt-s": "atomify:identifySong"
+    "ctrl-alt-s": "atomify:buildSpotifyStatus"
   }
 }
