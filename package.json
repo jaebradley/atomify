@@ -6,7 +6,7 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "atomify:toggle"
+    "atom-workspace": "atomify:identifySong"
   },
   "repository": "https://github.com/atom/atomify",
   "license": "MIT",
@@ -14,5 +14,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "node-osascript": "^1.0.4"
   }
 }
