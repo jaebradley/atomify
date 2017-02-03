@@ -5,9 +5,6 @@
   "description": "A short description of your package",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "atomify:buildSpotifyStatus"
-  },
   "repository": "https://github.com/atom/atomify",
   "license": "MIT",
   "engines": {
@@ -16,5 +13,12 @@
   "dependencies": {
     "node-osascript": "^1.0.4",
     "enumify": "^1.0.4"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
   }
 }
