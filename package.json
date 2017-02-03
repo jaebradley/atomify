@@ -1,0 +1,18 @@
+{
+  "name": "atomify",
+  "main": "./lib/atomify",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "atomify:toggle"
+  },
+  "repository": "https://github.com/atom/atomify",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

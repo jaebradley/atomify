@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle atomify",
+        "command": "atomify:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "atomify",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "atomify:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
