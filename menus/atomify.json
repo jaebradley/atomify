@@ -20,6 +20,10 @@
       {
         "label": "Turn Off Repeat",
         "command": "atomify:turnOffRepeat"
+      },
+      {
+        "label": "Toggle Play/Pause",
+        "command": "atomify:togglePlayPause"
       }
     ]
   },
@@ -45,6 +49,10 @@
             {
               "label": "Turn Off Repeat",
               "command": "atomify:turnOffRepeat"
+            },
+            {
+              "label": "Toggle Play/Pause",
+              "command": "atomify:togglePlayPause"
             }
           ]
         }

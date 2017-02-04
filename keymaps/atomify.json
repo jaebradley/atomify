@@ -3,6 +3,7 @@
     "alt-ctrl-s": "atomify:turnOnShuffle",
     "alt-ctrl-shift-s": "atomify:turnOffShuffle",
     "alt-ctrl-r": "atomify:turnOnRepeat",
-    "alt-ctrl-shift-r": "atomify:turnOffRepeat"
+    "alt-ctrl-shift-r": "atomify:turnOffRepeat",
+    "alt-ctrl-p": "atomify:togglePlayPause"
   }
 }
