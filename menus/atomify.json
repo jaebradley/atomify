@@ -6,12 +6,8 @@
         "command": "atomify:toggle"
       },
       {
-        "label": "Turn On Shuffle",
-        "command": "atomify:turnOnShuffle"
-      },
-      {
-        "label": "Turn Off Shuffle",
-        "command": "atomify:turnOffShuffle"
+        "label": "Toggle Shuffle",
+        "command": "atomify:toggleShuffle"
       },
       {
         "label": "Turn On Repeat",
@@ -47,8 +43,8 @@
               "command": "atomify:toggle"
             },
             {
-              "label": "Turn On Shuffle",
-              "command": "atomify:turnOnShuffle"
+              "label": "Toggle Shuffle",
+              "command": "atomify:toggleShuffle"
             },
             {
               "label": "Turn Off Shuffle",
