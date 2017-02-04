@@ -1,8 +1,7 @@
 {
   "atom-workspace": {
     "alt-ctrl-s": "atomify:toggleShuffle",
-    "alt-ctrl-r": "atomify:turnOnRepeat",
-    "alt-ctrl-shift-r": "atomify:turnOffRepeat",
+    "alt-ctrl-r": "atomify:toggleRepeat",
     "alt-ctrl-p": "atomify:togglePlayPause",
     "alt-ctrl-l": "atomify:goToNextTrack",
     "alt-ctrl-j": "atomify:goToPreviousTrack"
