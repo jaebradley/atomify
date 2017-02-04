@@ -1,4 +1,6 @@
 {
   "atom-workspace": {
+    "alt-ctrl-s": "atomify:turnOnShuffle",
+    "alt-ctrl-shift-s": "atomify:turnOffShuffle"
   }
 }
