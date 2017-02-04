@@ -1,6 +1,8 @@
 {
   "atom-workspace": {
     "alt-ctrl-s": "atomify:turnOnShuffle",
-    "alt-ctrl-shift-s": "atomify:turnOffShuffle"
+    "alt-ctrl-shift-s": "atomify:turnOffShuffle",
+    "alt-ctrl-r": "atomify:turnOnRepeat",
+    "alt-ctrl-shift-r": "atomify:turnOffRepeat"
   }
 }

@@ -12,6 +12,14 @@
       {
         "label": "Turn Off Shuffle",
         "command": "atomify:turnOffShuffle"
+      },
+      {
+        "label": "Turn On Repeat",
+        "command": "atomify:turnOnRepeat"
+      },
+      {
+        "label": "Turn Off Repeat",
+        "command": "atomify:turnOffRepeat"
       }
     ]
   },
@@ -33,6 +41,10 @@
             {
               "label": "Turn Off Shuffle",
               "command": "atomify:turnOffShuffle"
+            },
+            {
+              "label": "Turn Off Repeat",
+              "command": "atomify:turnOffRepeat"
             }
           ]
         }
