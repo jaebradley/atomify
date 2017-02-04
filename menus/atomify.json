@@ -4,6 +4,14 @@
       {
         "label": "Toggle atomify",
         "command": "atomify:toggle"
+      },
+      {
+        "label": "Turn On Shuffle",
+        "command": "atomify:turnOnShuffle"
+      },
+      {
+        "label": "Turn Off Shuffle",
+        "command": "atomify:turnOffShuffle"
       }
     ]
   },
@@ -17,6 +25,14 @@
             {
               "label": "Toggle",
               "command": "atomify:toggle"
+            },
+            {
+              "label": "Turn On Shuffle",
+              "command": "atomify:turnOnShuffle"
+            },
+            {
+              "label": "Turn Off Shuffle",
+              "command": "atomify:turnOffShuffle"
             }
           ]
         }
