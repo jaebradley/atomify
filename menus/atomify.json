@@ -24,6 +24,14 @@
       {
         "label": "Toggle Play/Pause",
         "command": "atomify:togglePlayPause"
+      },
+      {
+        "label": "Go To Next Track",
+        "command": "atomify:goToNextTrack"
+      },
+      {
+        "label": "Go To Previous Track",
+        "command": "atomify:goToPreviousTrack"
       }
     ]
   },
@@ -53,6 +61,14 @@
             {
               "label": "Toggle Play/Pause",
               "command": "atomify:togglePlayPause"
+            },
+            {
+              "label": "Go To Next Track",
+              "command": "atomify:goToNextTrack"
+            },
+            {
+              "label": "Go To Previous Track",
+              "command": "atomify:goToPreviousTrack"
             }
           ]
         }

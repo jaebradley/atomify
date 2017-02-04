@@ -4,6 +4,8 @@
     "alt-ctrl-shift-s": "atomify:turnOffShuffle",
     "alt-ctrl-r": "atomify:turnOnRepeat",
     "alt-ctrl-shift-r": "atomify:turnOffRepeat",
-    "alt-ctrl-p": "atomify:togglePlayPause"
+    "alt-ctrl-p": "atomify:togglePlayPause",
+    "alt-ctrl-l": "atomify:goToNextTrack",
+    "alt-ctrl-j": "atomify:goToPreviousTrack"
   }
 }
