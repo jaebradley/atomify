@@ -6,7 +6,7 @@
   "keywords": [
     "spotify"
   ],
-  "repository": "https://github.com/atom/atomify",
+  "repository": "https://github.com/jaebradley/atomify",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
