@@ -20,3 +20,9 @@ View and Control your Spotify experience without leaving Atom
 
 ### Toggle Play/Pause (Alt + Ctrl + P)
 ![Toggle Play/Pause](http://g.recordit.co/hSbIPnbzYT.gif)
+
+### Next Track (Alt + Ctrl + L)
+![Next Track](http://g.recordit.co/zpnmtQj0Aa.gif)
+
+### Previous Track (Alt + Ctrl + J)
+![Previous Track](http://g.recordit.co/U2Y0qtdwwe.gif)
