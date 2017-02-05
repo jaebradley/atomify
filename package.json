@@ -1,8 +1,8 @@
 {
   "name": "atomify",
   "main": "./lib/atomify",
-  "version": "0.1.0",
-  "description": "A short description of your package",
+  "version": "0.1.1",
+  "description": "Where Atom Meets Spotify (For Macs)",
   "keywords": [
     "spotify"
   ],
