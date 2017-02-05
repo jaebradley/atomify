@@ -1,6 +1,6 @@
 # Atomify (Where Atom Meets Spotify)
 
-View and Control your Spotify experience without leaving Atom
+View and Control your Spotify experience without leaving Atom on a Mac
 
 ## Example Usage
 
