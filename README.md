@@ -1,4 +1,6 @@
-# Atomify (Where Atom Meets Spotify)
+[![Build Status](https://travis-ci.org/jaebradley/atomify.svg?branch=master)](https://travis-ci.org/jaebradley/atomify)
+
+# [Atomify](https://atom.io/packages/atomify) (Where Atom Meets Spotify for Macs)
 
 View and Control your Spotify experience without leaving Atom on a Mac
 
