@@ -1,5 +1,8 @@
-# atomify package
+# Atomify (Where Atom Meets Spotify)
 
-A short description of your package.
+View and Control your Spotify experience without leaving Atom
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+## Example Usage
+
+### View
+![Example Usage](http://g.recordit.co/r2wi8BV6sm.gif)
