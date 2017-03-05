@@ -1,26 +1,29 @@
 {
   "name": "atomify",
-  "main": "./lib/atomify",
-  "version": "0.2.0",
   "description": "Where Atom Meets Spotify (For Macs)",
-  "keywords": [
-    "spotify"
-  ],
-  "repository": "https://github.com/jaebradley/atomify",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-    "node-osascript": "^1.0.4",
-    "enumify": "^1.0.4",
-    "immutable": "^3.8.1"
-  },
+  "version": "0.2.0",
+  "author": "Jae Bradley",
+  "bugs": "https://github.com/jaebradley/atomify/issues",
   "consumedServices": {
     "status-bar": {
       "versions": {
         "^1.0.0": "consumeStatusBar"
       }
     }
-  }
+  },
+  "dependencies": {
+    "enumify": "^1.0.4",
+    "immutable": "^3.8.1",
+    "node-osascript": "^1.0.4"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/jaebradley/atomify/",
+  "keywords": [
+    "spotify"
+  ],
+  "license": "MIT",
+  "main": "./lib/atomify",
+  "repository": "https://github.com/jaebradley/atomify"
 }
