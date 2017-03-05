@@ -14,7 +14,8 @@
   "dependencies": {
     "enumify": "^1.0.4",
     "immutable": "^3.8.1",
-    "node-osascript": "^1.0.4"
+    "node-osascript": "^1.0.4",
+    "spotify-application-client": "^1.0.0"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
