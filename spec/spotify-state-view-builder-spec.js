@@ -1,5 +1,8 @@
 'use babel';
 
+import Immutable from 'immutable';
+import { List } from 'immutable';
+
 import SpotifyStateViewBuilder from '../lib/services/SpotifyStateViewBuilder';
 import SpotifyStateView from '../lib/data/SpotifyStateView';
 
@@ -30,5 +33,31 @@ describe('Spotify State View Builder', function() {
     const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
     const imageTag = SpotifyStateViewBuilder.buildRepeatImage();
     expect(imageTag).toEqual(expectedImageTag);
+  });
+
+  describe('tests player settings images building', function() {
+    it('tests undefined shuffling and repeating', function() {
+      const stateDetails = {};
+      const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
+      expect(settingsImages).toEqual(List());
+    });
+
+    it('tests shuffling but not repeating', function() {
+      const stateDetails = {
+        isShuffling: true
+      };
+      const expected = List.of(SpotifyStateViewBuilder.buildShuffleImage());
+      const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
+      expect(Immutable.is(settingsImages, expected)).toBe(true);
+    });
+
+    it('tests not shuffling but repeating', function() {
+      const stateDetails = {
+        isRepeating: true,
+      };
+      const expected = List.of(SpotifyStateViewBuilder.buildRepeatImage());
+      const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
+      expect(Immutable.is(settingsImages, expected)).toBe(true);
+    });
   });
 });
