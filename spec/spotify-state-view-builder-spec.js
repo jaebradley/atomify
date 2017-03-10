@@ -17,4 +17,18 @@ describe('Spotify State View Builder', function() {
     const imageTag = SpotifyStateViewBuilder.buildSpotifyIconImage();
     expect(imageTag).toEqual(expectedImageTag);
   });
+
+  it('tests shuffle image building', function() {
+    const imageUrl = "https://raw.githubusercontent.com/jaebradley/atomify/master/images/shuffle.png?raw=true";
+    const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
+    const imageTag = SpotifyStateViewBuilder.buildShuffleImage();
+    expect(imageTag).toEqual(expectedImageTag);
+  });
+
+  it('tests repeat image building', function() {
+    const imageUrl = "https://raw.githubusercontent.com/jaebradley/atomify/master/images/repeat.png?raw=true";
+    const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
+    const imageTag = SpotifyStateViewBuilder.buildRepeatImage();
+    expect(imageTag).toEqual(expectedImageTag);
+  });
 });
