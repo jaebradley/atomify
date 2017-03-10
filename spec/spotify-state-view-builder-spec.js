@@ -7,6 +7,7 @@ describe('Spotify State View Builder', function() {
   it('tests image tag building', function() {
     const testValue = 'jaebaebae';
     const expectedImageTag = `<img class="atomify-image" src=${testValue} />`;
-    expect(SpotifyStateViewBuilder.buildImageTag(testValue)).to.eql(expectedImageTag);
+    const imageTag = SpotifyStateViewBuilder.buildImageTag(testValue);
+    expect(imageTag).toEqual(expectedImageTag);
   });
 });
