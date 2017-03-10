@@ -10,4 +10,11 @@ describe('Spotify State View Builder', function() {
     const imageTag = SpotifyStateViewBuilder.buildImageTag(testValue);
     expect(imageTag).toEqual(expectedImageTag);
   });
+
+  it('tests spotify image icon building', function() {
+    const imageUrl = "https://raw.githubusercontent.com/jaebradley/atomify/master/images/spotify.png?raw=true";
+    const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
+    const imageTag = SpotifyStateViewBuilder.buildSpotifyIconImage();
+    expect(imageTag).toEqual(expectedImageTag);
+  });
 });
