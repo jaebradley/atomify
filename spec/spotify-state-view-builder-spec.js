@@ -2,6 +2,7 @@
 
 import Immutable from 'immutable';
 import { List } from 'immutable';
+import { PlayerState } from 'spotify-application-client';
 
 import SpotifyStateViewBuilder from '../lib/services/SpotifyStateViewBuilder';
 import SpotifyStateView from '../lib/data/SpotifyStateView';
@@ -58,6 +59,24 @@ describe('Spotify State View Builder', function() {
       const expected = List.of(SpotifyStateViewBuilder.buildRepeatImage());
       const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
       expect(Immutable.is(settingsImages, expected)).toBe(true);
+    });
+  });
+
+  describe('tests player state image url building', function() {
+    it('tests playing state', function() {
+      const expected = SpotifyStateViewBuilder.getPlayingImageSource();
+      const imageSource = SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.PLAYING);
+      expect(imageSource).toEqual(expected);
+    });
+
+    it('tests paused state', function() {
+      const expected = SpotifyStateViewBuilder.getPausedImageSource();
+      const imageSource = SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.PAUSED);
+      expect(imageSource).toEqual(expected);
+    });
+
+    it('throws for unexpected player state', function() {
+      expect(() => SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.STOPPED)).toThrow(new TypeError("Unexpected player state"));
     });
   });
 });
