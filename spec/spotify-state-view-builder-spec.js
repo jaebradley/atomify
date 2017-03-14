@@ -4,6 +4,7 @@ import Immutable from 'immutable';
 import { List } from 'immutable';
 import { PlayerState } from 'spotify-application-client';
 
+import SpotifyStateDetails from '../lib/data/SpotifyStateDetails';
 import SpotifyStateViewBuilder from '../lib/services/SpotifyStateViewBuilder';
 import SpotifyStateView from '../lib/data/SpotifyStateView';
 
@@ -62,7 +63,7 @@ describe('Spotify State View Builder', function() {
     });
   });
 
-  describe('tests player state image url building', function() {
+  describe('tests player state image url fetching', function() {
     it('tests playing state', function() {
       const expected = SpotifyStateViewBuilder.getPlayingImageSource();
       const imageSource = SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.PLAYING);
@@ -78,5 +79,18 @@ describe('Spotify State View Builder', function() {
     it('throws for unexpected player state', function() {
       expect(() => SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.STOPPED)).toThrow(new TypeError("Unexpected player state"));
     });
+  });
+
+  describe('tests building music details', function() {
+    const details = new SpotifyStateDetails({
+      song: 'jae',
+      artist: 'baebae',
+      album: 'jae',
+      songPosition: 'baebae',
+      songDuration: 'hae'
+    });
+    const expected = 'jae | baebae | jae (baebae / hae)';
+    const musicDetails = SpotifyStateViewBuilder.buildMusicDetails(details);
+    expect(musicDetails).toEqual(expected);
   });
 });
