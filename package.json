@@ -15,6 +15,7 @@
     "enumify": "^1.0.4",
     "immutable": "^3.8.1",
     "node-osascript": "^1.0.4",
+    "seconds-converter": "^1.1.0",
     "spotify-application-client": "^1.0.0"
   },
   "engines": {
