@@ -165,4 +165,41 @@ describe('Spotify State View Builder', function() {
       });
     });
   });
+
+  describe('tests building active view', function() {
+    const viewBuilder = new SpotifyStateViewBuilder();
+    const iconImage = 'foo';
+    const settingsDetails = 'bar';
+    const musicDetails = 'baz';
+
+    viewBuilder.buildSpotifyIconImage = jasmine
+      .createSpy('build-spotify-icon-image-spy')
+      .andCallFake(function() {
+        return iconImage;
+      });
+
+    viewBuilder.buildPlayerSettingsDetails = jasmine
+      .createSpy('build-player-settings-details-spy')
+      .andCallFake(function(value) {
+        return settingsDetails;
+      });
+
+    viewBuilder.buildMusicDetails = jasmine
+      .createSpy('build-music-details-spy')
+      .andCallFake(function(value) {
+        return musicDetails;
+      });
+
+    it('builds active view', function() {
+      const expected = new SpotifyStateView({
+        spotifyIcon: iconImage,
+        settingsDetails: settingsDetails,
+        musicDetails: musicDetails
+      });
+      viewBuilder.buildActiveView({})
+        .then(view => {
+          expect(view).toEqual(expected);
+        });
+    });
+  });
 });
