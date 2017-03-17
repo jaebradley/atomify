@@ -9,38 +9,42 @@ import SpotifyStateViewBuilder from '../lib/services/SpotifyStateViewBuilder';
 import SpotifyStateView from '../lib/data/SpotifyStateView';
 
 describe('Spotify State View Builder', function() {
+  const viewBuilder = new SpotifyStateViewBuilder();
+
   it('tests image tag building', function() {
     const testValue = 'jaebaebae';
     const expectedImageTag = `<img class="atomify-image" src=${testValue} />`;
-    const imageTag = SpotifyStateViewBuilder.buildImageTag(testValue);
+    const imageTag = viewBuilder.buildImageTag(testValue);
     expect(imageTag).toEqual(expectedImageTag);
   });
 
   it('tests spotify image icon building', function() {
     const imageUrl = "https://raw.githubusercontent.com/jaebradley/atomify/master/images/spotify.png?raw=true";
     const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
-    const imageTag = SpotifyStateViewBuilder.buildSpotifyIconImage();
+    const imageTag = viewBuilder.buildSpotifyIconImage();
     expect(imageTag).toEqual(expectedImageTag);
   });
 
   it('tests shuffle image building', function() {
     const imageUrl = "https://raw.githubusercontent.com/jaebradley/atomify/master/images/shuffle.png?raw=true";
     const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
-    const imageTag = SpotifyStateViewBuilder.buildShuffleImage();
+    const imageTag = viewBuilder.buildShuffleImage();
     expect(imageTag).toEqual(expectedImageTag);
   });
 
   it('tests repeat image building', function() {
     const imageUrl = "https://raw.githubusercontent.com/jaebradley/atomify/master/images/repeat.png?raw=true";
     const expectedImageTag = `<img class="atomify-image" src=${imageUrl} />`;
-    const imageTag = SpotifyStateViewBuilder.buildRepeatImage();
+    const imageTag = viewBuilder.buildRepeatImage();
     expect(imageTag).toEqual(expectedImageTag);
   });
 
   describe('tests player settings images building', function() {
+    const viewBuilder = new SpotifyStateViewBuilder();
+
     it('tests undefined shuffling and repeating', function() {
       const stateDetails = {};
-      const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
+      const settingsImages = viewBuilder.buildPlayerSettingsImages(stateDetails);
       expect(settingsImages).toEqual(List());
     });
 
@@ -48,8 +52,8 @@ describe('Spotify State View Builder', function() {
       const stateDetails = {
         isShuffling: true
       };
-      const expected = List.of(SpotifyStateViewBuilder.buildShuffleImage());
-      const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
+      const expected = List.of(viewBuilder.buildShuffleImage());
+      const settingsImages = viewBuilder.buildPlayerSettingsImages(stateDetails);
       expect(Immutable.is(settingsImages, expected)).toBe(true);
     });
 
@@ -57,40 +61,43 @@ describe('Spotify State View Builder', function() {
       const stateDetails = {
         isRepeating: true,
       };
-      const expected = List.of(SpotifyStateViewBuilder.buildRepeatImage());
-      const settingsImages = SpotifyStateViewBuilder.buildPlayerSettingsImages(stateDetails);
+      const expected = List.of(viewBuilder.buildRepeatImage());
+      const settingsImages = viewBuilder.buildPlayerSettingsImages(stateDetails);
       expect(Immutable.is(settingsImages, expected)).toBe(true);
     });
   });
 
   describe('tests player state image url fetching', function() {
+    const viewBuilder = new SpotifyStateViewBuilder();
+
     it('tests playing state', function() {
-      const expected = SpotifyStateViewBuilder.getPlayingImageSource();
-      const imageSource = SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.PLAYING);
+      const expected = viewBuilder.getPlayingImageSource();
+      const imageSource = viewBuilder.getPlayerStateImageUrl(PlayerState.PLAYING);
       expect(imageSource).toEqual(expected);
     });
 
     it('tests paused state', function() {
-      const expected = SpotifyStateViewBuilder.getPausedImageSource();
-      const imageSource = SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.PAUSED);
+      const expected = viewBuilder.getPausedImageSource();
+      const imageSource = viewBuilder.getPlayerStateImageUrl(PlayerState.PAUSED);
       expect(imageSource).toEqual(expected);
     });
 
     it('throws for unexpected player state', function() {
-      expect(() => SpotifyStateViewBuilder.getPlayerStateImageUrl(PlayerState.STOPPED)).toThrow(new TypeError("Unexpected player state"));
+      expect(() => viewBuilder.getPlayerStateImageUrl(PlayerState.STOPPED)).toThrow(new TypeError("Unexpected player state"));
     });
   });
 
   describe('tests building music details', function() {
-    const details = new SpotifyStateDetails({
+    const viewBuilder = new SpotifyStateViewBuilder();
+    const details = {
       song: 'jae',
       artist: 'baebae',
       album: 'jae',
       songPosition: 'baebae',
       songDuration: 'hae'
-    });
+    };
     const expected = 'jae | baebae | jae (baebae / hae)';
-    const musicDetails = SpotifyStateViewBuilder.buildMusicDetails(details);
+    const musicDetails = viewBuilder.buildMusicDetails(details);
     expect(musicDetails).toEqual(expected);
   });
 });
