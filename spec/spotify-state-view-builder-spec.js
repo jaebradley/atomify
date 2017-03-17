@@ -100,4 +100,21 @@ describe('Spotify State View Builder', function() {
     const musicDetails = viewBuilder.buildMusicDetails(details);
     expect(musicDetails).toEqual(expected);
   });
+
+  describe('tests building player state image', function() {
+    const viewBuilder = new SpotifyStateViewBuilder();
+    const imageTagValue = "foo";
+
+    viewBuilder.buildImageTag = jasmine.createSpy('build-image-tag-spy').andCallFake(function(value) {
+      return imageTagValue;
+    });
+    viewBuilder.getPlayerStateImageUrl = jasmine.createSpy('player-state-image-url-spy').andCallFake(function(state) {
+      return state;
+    });
+
+    it('calculates player state image', function() {
+      const calculatedValue = viewBuilder.buildPlayerStateImage("baz");
+      expect(calculatedValue).toEqual(imageTagValue);
+    });
+  });
 });
