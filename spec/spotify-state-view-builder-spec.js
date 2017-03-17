@@ -202,4 +202,27 @@ describe('Spotify State View Builder', function() {
         });
     });
   });
+
+  describe('tests building inactive view', function() {
+    const viewBuilder = new SpotifyStateViewBuilder();
+    const iconImage = 'foo';
+
+    viewBuilder.buildSpotifyIconImage = jasmine
+      .createSpy('build-spotify-icon-image-spy')
+      .andCallFake(function() {
+        return iconImage;
+      });
+
+    it('builds inactive view', function() {
+      const expected = new SpotifyStateView({
+        spotifyIcon: iconImage,
+        settingsDetails: 'Not Open',
+        musicDetails: ''
+      });
+      viewBuilder.buildInactiveView({})
+        .then(view => {
+          expect(view).toEqual(expected);
+        });
+    });
+  });
 });
