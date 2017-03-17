@@ -113,8 +113,56 @@ describe('Spotify State View Builder', function() {
     });
 
     it('calculates player state image', function() {
-      const calculatedValue = viewBuilder.buildPlayerStateImage("baz");
+      const calculatedValue = viewBuilder.buildPlayerStateImage('baz');
+
+      expect(viewBuilder.buildImageTag).toHaveBeenCalled();
+      expect(viewBuilder.getPlayerStateImageUrl).toHaveBeenCalled();
       expect(calculatedValue).toEqual(imageTagValue);
+    });
+  });
+
+  describe('tests building player settings details', function() {
+    describe('tests empty images', function() {
+      const viewBuilder = new SpotifyStateViewBuilder();
+      const imageValue = 'foo';
+
+      viewBuilder.buildPlayerStateImage = jasmine.createSpy('build-player-state-image-spy').andCallFake(function(value) {
+        return imageValue;
+      });
+
+      viewBuilder.buildPlayerSettingsImages = jasmine.createSpy('build-player-settings-image-spy').andCallFake(function(value) {
+        return List();
+      });
+
+      it('calculates player settings details with empty images', function() {
+        const calculated = viewBuilder.buildPlayerSettingsDetails('bar');
+
+        expect(viewBuilder.buildPlayerStateImage).toHaveBeenCalled();
+        expect(viewBuilder.buildPlayerSettingsImages).toHaveBeenCalled();
+        expect(calculated).toEqual(imageValue);
+      });
+    });
+
+    describe('tests non-empty images', function() {
+      const viewBuilder = new SpotifyStateViewBuilder();
+      const imageValue = 'foo';
+
+      viewBuilder.buildPlayerStateImage = jasmine.createSpy('build-player-state-image-spy').andCallFake(function(value) {
+        return imageValue;
+      });
+
+      viewBuilder.buildPlayerSettingsImages = jasmine.createSpy('build-player-settings-image-spy').andCallFake(function(value) {
+        return List.of('baz', 'jae');
+      });
+
+      it('calculates player settings details with non-empty images', function() {
+        const expected = `${imageValue} baz jae`;
+        const calculated = viewBuilder.buildPlayerSettingsDetails('bar');
+
+        expect(viewBuilder.buildPlayerStateImage).toHaveBeenCalled();
+        expect(viewBuilder.buildPlayerSettingsImages).toHaveBeenCalled();
+        expect(calculated).toEqual(expected);
+      });
     });
   });
 });
