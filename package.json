@@ -16,7 +16,7 @@
     "immutable": "^3.8.1",
     "node-osascript": "^1.0.4",
     "seconds-converter": "^1.1.0",
-    "spotify-application-client": "^1.0.0"
+    "spotify-application-client": "^1.0.3"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
