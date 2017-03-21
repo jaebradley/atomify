@@ -1,7 +1,7 @@
 {
   "name": "atomify",
   "description": "Where Atom Meets Spotify (For Macs)",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Jae Bradley",
   "bugs": "https://github.com/jaebradley/atomify/issues",
   "consumedServices": {
