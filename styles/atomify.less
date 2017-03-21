@@ -12,7 +12,12 @@
 .spotify-music-details {
   display: inline-block;
   vertical-align: middle;
-  width: 300px;
+  // fixed width because length of music details
+  // always changes slightly and minor div width
+  // changes get distracting
+  max-width: 300px;
+  // hacky, but to support "Not Open" case
+  min-width: 25px;
 }
 
 .atomify-image {
