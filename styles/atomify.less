@@ -1,8 +1,26 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
-// for a full listing of what's available.
 @import "ui-variables";
 
-.atomify {
+#atomify {
+  display: inline-block;
+}
+
+.spotify-settings-details {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.spotify-music-details {
+  display: inline-block;
+  vertical-align: middle;
+  // fixed width because length of music details
+  // always changes slightly and minor div width
+  // changes get distracting
+  max-width: 300px;
+  // hacky, but to support "Not Open" case
+  min-width: 25px;
+}
+
+.atomify-image {
+  margin-right: 10px;
+  vertical-align: middle;
 }
