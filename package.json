@@ -17,8 +17,8 @@
     "moment": "^2.18.0",
     "node-osascript": "^1.0.4",
     "prop-types": "^15.5.10",
-    "react": "0.14.7",
-    "react-dom": "0.14.7",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
     "react-redux": "^5.0.5",
     "redux": "^3.7.2",
     "spotify-application-client": "^1.0.4"
