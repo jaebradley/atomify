@@ -16,6 +16,11 @@
     "immutable": "^3.8.1",
     "moment": "^2.18.0",
     "node-osascript": "^1.0.4",
+    "prop-types": "^15.5.10",
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
     "spotify-application-client": "^1.0.4"
   },
   "engines": {
@@ -26,6 +31,6 @@
     "spotify"
   ],
   "license": "MIT",
-  "main": "./lib/atomify",
+  "main": "./lib/atom/main",
   "repository": "https://github.com/jaebradley/atomify"
 }
