@@ -31,6 +31,6 @@
     "spotify"
   ],
   "license": "MIT",
-  "main": "./lib/atom/main",
+  "main": "./lib/atom/Main",
   "repository": "https://github.com/jaebradley/atomify"
 }
